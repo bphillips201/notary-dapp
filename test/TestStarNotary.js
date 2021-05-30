@@ -95,7 +95,12 @@ describe('StarNotary contract', () => {
     
     it('lookUptokenIdToStarInfo test', async() => {
         // 1. create a Star with different tokenId
+        let user = accounts[1];
+        let starId = 10;
+        await instance.createStar('lookup star', starId, { from: user });
         // 2. Call your method lookUptokenIdToStarInfo
+        let starLookup = await instance.lookUptokenIdToStarInfo(starId);
         // 3. Verify if you Star name is the same
+        assert.equal(starLookup, 'lookup star');
     });
 })
