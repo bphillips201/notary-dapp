@@ -22,7 +22,7 @@
  *
  */
 
-const HDWalletProvider = require('truffle-hdwallet-provider');
+const HDWalletProvider = require('./app/node_modules/truffle-hdwallet-provider/dist/index.js');
 const infuraUrl = "https://rinkeby.infura.io/v3/516c79125dc342d1a980a5a77603da41";
 
 const fs = require('fs');
